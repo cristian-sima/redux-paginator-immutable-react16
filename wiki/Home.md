@@ -1,4 +1,4 @@
-Welcome to the redux-paginator-immutable wiki!
+Welcome to the redux-paginator-immutable-react16 wiki!
 
 The module exports:
 - `<Info ...props />`

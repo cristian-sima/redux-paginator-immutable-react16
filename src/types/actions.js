@@ -3,7 +3,7 @@
 import type { EndPointCb } from "./index";
 
 export type RequestPageAction = {
-  type : "@@redux-paginator-immutable/REQUEST_PAGE";
+  type : "@@redux-paginator-immutable-react16/REQUEST_PAGE";
   meta : {
     endpoint: string;
     endpointCb: EndPointCb;
@@ -20,7 +20,7 @@ export type RequestPageAction = {
 };
 
 export type ReceivePageAction = {
-  type : "@@redux-paginator-immutable/RECEIVE_PAGE";
+  type : "@@redux-paginator-immutable-react16/RECEIVE_PAGE";
   meta : {
     endpoint: string;
     endpointCb: EndPointCb;
@@ -39,7 +39,7 @@ export type ReceivePageAction = {
 };
 
 export type ChangeViewAction = {
-  type : "@@redux-paginator-immutable/CHANGE_VIEW";
+  type : "@@redux-paginator-immutable-react16/CHANGE_VIEW";
   meta : {
     endpoint: string;
   };
@@ -50,7 +50,7 @@ export type ChangeViewAction = {
 };
 
 export type ResetViewAction = {
-  type : "@@redux-paginator-immutable/RESET_VIEW";
+  type : "@@redux-paginator-immutable-react16/RESET_VIEW";
   meta : {
     endpoint: string;
   };
@@ -60,7 +60,7 @@ export type ResetViewAction = {
 };
 
 export type ClearDataAction = {
-  type : "@@redux-paginator-immutable/CLEAR_DATA";
+  type : "@@redux-paginator-immutable-react16/CLEAR_DATA";
   meta : {
     endpoint: string;
   };
@@ -71,21 +71,21 @@ export type FetchCurrentCompanyInfoPending = {
 };
 
 export type FetchItemDataPending = {
-  type : "@@redux-paginator-immutable/FETCH_ITEM_DATA_PENDING";
+  type : "@@redux-paginator-immutable-react16/FETCH_ITEM_DATA_PENDING";
   meta: {
     id: string;
   }
 };
 
 export type FetchItemDataRejected = {
-  type : "@@redux-paginator-immutable/FETCH_ITEM_DATA_REJECTED";
+  type : "@@redux-paginator-immutable-react16/FETCH_ITEM_DATA_REJECTED";
   meta: {
     id: string;
   }
 };
 
 export type FetchItemDataFulFilled = {
-  type : "@@redux-paginator-immutable/FETCH_ITEM_DATA_FULFILLED";
+  type : "@@redux-paginator-immutable-react16/FETCH_ITEM_DATA_FULFILLED";
   payload: {
     Data: any;
   };

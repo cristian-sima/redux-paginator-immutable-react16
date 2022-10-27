@@ -1,7 +1,7 @@
 {
-  "name": "redux-paginator-immutable",
+  "name": "redux-paginator-immutable-react16",
   "version": "2.7.14",
-  "description": "redux-paginator-immutable helps you deal with paginated API by composing your existing reducers",
+  "description": "redux-paginator-immutable-react16 helps you deal with paginated API by composing your existing reducers",
   "main": "./lib/index.js",
   "babel": {
     "presets": [
@@ -32,8 +32,8 @@
   },
   "scripts": {
     "build:lib": "babel src --out-dir lib",
-    "build:umd": "cross-env NODE_ENV=development webpack src/index.js dist/redux-paginator-immutable.js",
-    "build:umd:min": "cross-env NODE_ENV=production webpack src/index.js dist/redux-paginator-immutable.min.js",
+    "build:umd": "cross-env NODE_ENV=development webpack src/index.js dist/redux-paginator-immutable-react16.js",
+    "build:umd:min": "cross-env NODE_ENV=production webpack src/index.js dist/redux-paginator-immutable-react16.min.js",
     "build": "npm run build:lib",
     "clean": "rimraf dist lib",
     "check": "npm-check -u -i babel-jest -i jest --specials=bin,eslint,babel,webpack",
@@ -47,7 +47,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cristian-sima/redux-paginator-immutable.git"
+    "url": "git+https://github.com/cristian-sima/redux-paginator-immutable-react16.git"
   },
   "files": [
     "dist",
@@ -67,9 +67,9 @@
   "author": "Cristian Sima",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cristian-sima/redux-paginator-immutable/issues"
+    "url": "https://github.com/cristian-sima/redux-paginator-immutable-react16/issues"
   },
-  "homepage": "https://github.com/cristian-sima/redux-paginator-immutable#readme",
+  "homepage": "https://github.com/cristian-sima/redux-paginator-immutable-react16#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.1.0",

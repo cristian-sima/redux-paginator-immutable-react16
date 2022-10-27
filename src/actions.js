@@ -40,7 +40,7 @@ const requestPage = ({
   page,
   token,
 } : RequestPageArgsTypes) : Action => ({
-  type : "@@redux-paginator-immutable/REQUEST_PAGE",
+  type : "@@redux-paginator-immutable-react16/REQUEST_PAGE",
   meta : {
     endpoint,
     endpointCb,
@@ -68,7 +68,7 @@ const receivePage = ({
   error,
   total,
 } : ReceivePageArgsTypes) : Action => ({
-  type : "@@redux-paginator-immutable/RECEIVE_PAGE",
+  type : "@@redux-paginator-immutable-react16/RECEIVE_PAGE",
   meta : {
     endpoint,
     endpointCb,
@@ -86,7 +86,7 @@ const receivePage = ({
 });
 
 const resetView = (endpoint : string, token : string) : Action => ({
-  type : "@@redux-paginator-immutable/RESET_VIEW",
+  type : "@@redux-paginator-immutable-react16/RESET_VIEW",
   meta : {
     endpoint,
   },
@@ -99,7 +99,7 @@ const changeView = (endpoint : string, {
   token,
   view,
 } : { token : string, view : number }) : Action => ({
-  type : "@@redux-paginator-immutable/CHANGE_VIEW",
+  type : "@@redux-paginator-immutable-react16/CHANGE_VIEW",
   meta : {
     endpoint,
   },
@@ -110,7 +110,7 @@ const changeView = (endpoint : string, {
 });
 
 const clearData = (endpoint : string) : Action => ({
-  type : "@@redux-paginator-immutable/CLEAR_DATA",
+  type : "@@redux-paginator-immutable-react16/CLEAR_DATA",
   meta : {
     endpoint,
   },
@@ -136,7 +136,7 @@ const fetchDataItemRequest = ({ dataItemURL, normalizeDataItem, id } : FetchData
 );
 
 export const fetchItem = (things : FetchDataItem) : any => ({
-  type    : "@@redux-paginator-immutable/FETCH_ITEM_DATA",
+  type    : "@@redux-paginator-immutable-react16/FETCH_ITEM_DATA",
   payload : fetchDataItemRequest(things),
   meta    : {
     id       : things.id,

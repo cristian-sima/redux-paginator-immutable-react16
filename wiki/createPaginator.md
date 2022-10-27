@@ -98,7 +98,7 @@ We start with the file for paginator:
 ```jsx
 // @flow
 
-import { createPaginator, manageEntity, manipulateItems } from "redux-paginator-immutable";
+import { createPaginator, manageEntity, manipulateItems } from "redux-paginator-immutable-react16";
 
 import { normalizrAccount } from "./request";
 
@@ -178,7 +178,7 @@ then we combine them:
 import entities from "./entities";
 import pagination from "./pagination";
 
-import { createItemReducer } from "redux-paginator-immutable";
+import { createItemReducer } from "redux-paginator-immutable-react16";
 
 const selectors = createItemReducer(accountsPaginator);
 
