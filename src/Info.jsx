@@ -8,7 +8,7 @@ type InfoPropTypes = {
 };
 
 import React from "react";
-import { numberToLocaleForm } from "x25/utility";
+import { numberToLocaleForm } from "x25-react16/utility";
 
 const getNumberForm = (value : number, one : string, all : string) : string => {
   if (value === 1) {

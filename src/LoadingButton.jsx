@@ -1,54 +1,49 @@
-// @flow
-
 import React from "react";
+import { ErrorMessage, LoadingMessage } from "x25-react16/Messages";
+import { useInView } from "react-intersection-observer";
 
 type LoadingButtonPropTypes = {
-  isFetching: bool;
-  hasProblems: bool;
-
+  isFetching: boolean;
+  hasProblems: boolean;
   onLoadMoreClick: () => void;
 };
+const LoadingButton = (props : LoadingButtonPropTypes) => {
+  const
+    { isFetching, hasProblems, onLoadMoreClick } = props,
+    [
+      ref,
+      inView,
+    ] = useInView({
+    // /* Optional options */
+    // triggerOnce: true,
+    // rootMargin: '0px 0px',
+    });
 
-import { ErrorMessage, LoadingMessage } from "x25/Messages";
+  React.useEffect(() => {
+    if (!isFetching && !hasProblems && inView) {
+      onLoadMoreClick();
+    }
+  }, [
+    isFetching,
+    hasProblems,
+    inView,
+  ]);
 
-class LoadingButton extends React.Component<LoadingButtonPropTypes> {
-  props: LoadingButtonPropTypes;
-
-  shouldComponentUpdate (nextProps : LoadingButtonPropTypes) {
-    const { hasProblems, isFetching } = this.props;
-
-    return (
-      hasProblems !== nextProps.hasProblems ||
-      isFetching !== nextProps.isFetching
-    );
-  }
-
-  render () {
-    const { isFetching, hasProblems, onLoadMoreClick } = this.props;
-
-    return (
-      <div className="text-center my-2">
-        {
-          hasProblems ? (
-            <ErrorMessage message="Nu am putut prelua. Încearcă încă o dată..." />
-          ) : null
-        }
-        {
-          isFetching ? (
-            <LoadingMessage message="Preiau date..." sm />
-          ) : (
-            <button
-              className="btn btn-outline-info d-print-none"
-              disabled={isFetching}
-              onClick={onLoadMoreClick}
-              type="button">
-              {isFetching ? "Încarc..." : "Încarcă mai mule"}
-            </button>
-          )
-        }
-      </div>
-    );
-  }
-}
+  return (
+    <div className="text-center my-2">
+      {hasProblems ? <ErrorMessage message={"A apărut o problemă! "} /> : null}
+      {isFetching ? <LoadingMessage message={"Se încarcă ..."} sm /> : (
+        <button
+          className="btn btn-primary-info d-print-none"
+          disabled={isFetching}
+          onClick={onLoadMoreClick}
+          ref={ref}
+          type="button">
+          {isFetching ? "Se încarcă" : "Încarcă mai multe"}
+        </button>
+      )}
+    </div>
+  );
+};
 
 export default LoadingButton;

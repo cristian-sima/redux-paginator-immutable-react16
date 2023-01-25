@@ -1,6 +1,6 @@
 {
   "name": "redux-paginator-immutable-react16",
-  "version": "2.7.14",
+  "version": "2.7.17",
   "description": "redux-paginator-immutable-react16 helps you deal with paginated API by composing your existing reducers",
   "main": "./lib/index.js",
   "babel": {
@@ -101,9 +101,10 @@
     "immutable": "*",
     "query-string": "^6.9.0",
     "react": "^16.12.0",
+    "react-intersection-observer": "^9.4.1",
     "redux": "^4.0.5",
     "reselect": "^4.0.0",
     "superagent": "^5.1.1",
-    "x25": "^5.1.25"
+    "x25-react16": "^5.1.42"
   }
 }

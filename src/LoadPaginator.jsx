@@ -46,7 +46,7 @@ import selectors from "./selectors";
 
 import LoadingButton from "./LoadingButton";
 
-import { LargeErrorMessage, LoadingMessage } from "x25/Messages";
+import { LargeErrorMessage, LoadingMessage } from "x25-react16/Messages";
 
 const mapStateToProps = (state, { token, settings } : OwnProps) => {
 

@@ -6,7 +6,7 @@ type PaginatorSettings = {
   manageEntity: any;
   resultsKey: string;
 
-  // by default "{rowsPerLoad} from x25/utility/others"
+  // by default "{rowsPerLoad} from x25-react16/utility/others"
   rowsPerLoad?: number;
 
   // by default "(items) => items"

@@ -30,7 +30,7 @@ import { connect } from "react-redux";
 
 import { fetchItem as fetchItemAction } from "./actions";
 
-import { LargeErrorMessage, LoadingMessage } from "x25/Messages";
+import { LargeErrorMessage, LoadingMessage } from "x25-react16/Messages";
 
 const
   mapStateToProps = (state : any, { settings : { selectors }, id } : OwnProps) => ({
